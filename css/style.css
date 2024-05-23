@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topnav{
+    overflow: hidden;
+    background: #333;
+    position: relative;
+    display: none;
+}
+.topnav #myLinks{
+    display: none;
+}
+.topnav a{
+    color: #fff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+.topnav a.icon{
+    background: red;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.topnav a:hover{
+    background: #ddd;
+    color: #000;
+}
+.topnav .active{
+    background-color: #04AA6D;
+    color: #fff;
+}
+/* End of Mobile */
+
+/* Desktop navigation */
+nav{
+    background: lightgray;
+    padding: 20px 0;
+}
+nav a{
+    text-decoration: none;
+    padding: 14px 16px;
+    color: #000;
+    font-size: 18px;
+}
+nav a:hover{
+    border-bottom: 1px solid #000;
+}
+/* End Desktop navigation */
+header{
+    height: 300px;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../img/builder.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main{
+    height: 350px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.sect1{
+    width: 49%;
+    height: 350px;
+    background: url('../img/IMG_0134.JPG');
+    background-position: center;
+    background-size: cover;
+}
+.sect2{
+    width: 49%;
+    height: 350px;
+    background: url('../img/IMG_0364.JPG');
+    background-position: center;
+    background-size: cover;
+}
+.sect:hover{
+    opacity: 0.8;
+}
+section{
+    padding: 30px;
+    line-height: 1.4;
+}
+section h2{
+    color: #606060;
+}
+section p{
+    color: #808080;
+}
+/* End of section */
+.section2{
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    height: 300px;
+    width: 32%;
+    background: coral;
+}
+.col:hover{
+    transform: scale(1.1);
+}
+footer{
+    height: 60px;
+    background: lightgray;
+}
+footer p{
+    text-align: center;
+    line-height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsiveness */
+@media screen and (max-width:600px){
+    nav{
+        display: none;
+    }
+    .topnav{
+        display: block;
+    }
+    .main{
+        flex-direction: column-reverse;
+        height: 600px;
+    }
+    .sect1, .sect2{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .section2{
+        flex-direction: column;
+    }
+    .col{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
